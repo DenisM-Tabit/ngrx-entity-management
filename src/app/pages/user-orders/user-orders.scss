@@ -1,0 +1,22 @@
+:host{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .container{
+    display: flex;
+    gap: 3rem;
+
+    .my-button{
+      padding-top: 8px;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+
+      button{
+        background: #e8e8e8;
+      }
+    }
+  }
+}

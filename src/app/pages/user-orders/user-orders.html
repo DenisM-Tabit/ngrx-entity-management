@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="my-button">
+    <mat-menu #menu="matMenu">
+      @for(user of users() ; track user.id){
+        <button mat-menu-item (click)="selectUser(user)">
+          <span>{{user.name}}</span>
+        </button>
+      }
+    </mat-menu>
+    <button  mat-button [matMenuTriggerFor]="menu">Select User</button>
+    @if (timeElapsed()){
+      <span>Seconds Passed: {{timeElapsed()}}</span>
+    }
+
+  </div>
+  <app-user [selectedUserName]="selectedUser()?.name"></app-user>
+  <app-order [selectedUserTotal]="selectedUserTotal()"></app-order>
+</div>
